@@ -30,12 +30,12 @@
   <script src="src/data/exampleVideoData.js"></script>
 
   <script>
-    var vidArray = [];
-    exampleVideoData.forEach(function(videoDatum) {
-      var video = new Video(videoDatum);
-      vidArray.push(video);
-    });
-    var videos = new Videos(vidArray);
+    // var vidArray = [];
+    // exampleVideoData.forEach(function(videoDatum) {
+    //   var video = new Video(videoDatum);
+    //   vidArray.push(video);
+    // });
+    // var videos = new Videos(vidArray);
     backboneReady(() => {
       new AppView();
     });
