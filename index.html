@@ -27,8 +27,15 @@
   <script src="src/views/videoList.js"></script>
   <script src="src/views/videoListEntry.js"></script>
   <script src="src/views/videoPlayer.js"></script>
+  <script src="src/data/exampleVideoData.js"></script>
 
   <script>
+    var vidArray = [];
+    exampleVideoData.forEach(function(videoDatum) {
+      var video = new Video(videoDatum);
+      vidArray.push(video);
+    });
+    var videos = new Videos(vidArray);
     backboneReady(() => {
       new AppView();
     });
