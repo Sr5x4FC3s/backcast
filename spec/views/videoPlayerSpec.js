@@ -6,7 +6,7 @@ describe ('VideoPlayerView', function() {
 
     collection = new Videos(fakeVideoData);
     view = new VideoPlayerView({ collection: collection });
-    view.template = _.template('<div class="video-player-details"><%= snippet.title %></div>');
+    view.template = _.template('<div class="video-player-details"><%= title %></div>');
 
     model = collection.at(0);
     model.select();

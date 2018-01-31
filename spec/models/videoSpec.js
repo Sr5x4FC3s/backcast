@@ -3,6 +3,7 @@ describe ('VideoModel', function() {
 
   beforeEach(function() {
     model = new Video(fakeVideoData[0]);
+    collection = new Videos(model);
     sinon.spy(model, 'trigger');
   });
 
