@@ -3,17 +3,11 @@ var AppView = Backbone.View.extend({
   el: '#app',
 
   initialize: function() {
-    var vidArray = [];
-    //change to source of data when doing real app
-    fakeVideoData.forEach(function(videoDatum) {
-      var video = new Video(videoDatum);
-      vidArray.push(video);
-    });
-    this.videos = new Videos(vidArray);
+    window.selected = 0;
     this.render();
-    videoListView = new VideoListView({collection: this.videos});
+    videoListView = new VideoListView({collection: this.collection});
     videoListView.render();
-    videoPlayerView = new VideoPlayerView();
+    videoPlayerView = new VideoPlayerView({collection: this.collection});
   },
 
 

@@ -46,5 +46,15 @@
     <div id="mocha"></div>
     <div class="list"></div>
     <div class="video-list"></div>
+    <div class="player"></div>
+    <script>     
+        var vidArray = [];
+        //change to source of data when doing real app
+        fakeVideoData.forEach(function(videoDatum) {
+          var video = new Video(videoDatum);
+          vidArray.push(video);
+        });
+        this.videos = new Videos(vidArray);
+    </script>
   </body>
 </html>

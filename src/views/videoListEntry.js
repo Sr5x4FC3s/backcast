@@ -9,8 +9,9 @@ var VideoListEntryView = Backbone.View.extend({
   render: function() {
     var title = this.model.get('title');
     var id = this.model.get('id');
-    this.$el.find('h1').remove();
-    var node = $(this.template({title}));
+    var description = this.model.get('description');
+    var thumbnailUrl = this.model.get('thumbnailUrl');
+    var node = $(this.template({thumbnailUrl, title, description}));
     node.attr('id', id);
     node.on('click', this.model.select.bind(this.model));
     this.$el.append(node);

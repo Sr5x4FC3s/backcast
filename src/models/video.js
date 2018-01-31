@@ -12,7 +12,9 @@ var Video = Backbone.Model.extend({
 
   select: function() {
     console.log('clicked', this.get('title'));
+    window.selected = this.collection.indexOf(this);
     this.trigger('select', this);
+    console.log('id: ', this.get('id'), 'index', this.collection.indexOf(this));
   }
 
 });
